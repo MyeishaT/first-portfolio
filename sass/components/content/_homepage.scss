@@ -1,0 +1,625 @@
+// Use for all font colors
+//background-image: linear-gradient( 109.6deg,  rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+
+h2{
+    position: relative;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vw;
+    font-weight: 900;
+    color: rgb(141, 132, 132);
+    letter-spacing: .25px;
+    text-transform: uppercase;
+    perspective: 500px;
+    /* transform: rotate(2deg); */
+}
+
+h2:before,
+h2:after{
+    content: attr(aria-label);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    text-shadow: 2.15px 2.15px 2.15px rgba(60,60,214,1);
+}
+
+h2:before{
+    animation: ani-1 2.5s ease-in-out infinite;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+h2:after{
+    opacity: .4;
+    filter: blur(1px);
+    transform: translate(-50%, -50%) rotateX(20deg);
+    animation: ani-2 2.5s ease-in-out infinite;
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+@keyframes ani-1{
+    50%{
+        transform: translate(-50%, -60%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    }
+}
+
+@keyframes ani-2{
+    50%{
+        transform: translate(-50%, -60%) rotateX(10deg);
+        clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+    }
+}
+
+
+//Home
+
+  //profile picture
+  .wrap1{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boxes1 {
+    background: url("http://firstportfolio.local/wp-content/uploads/2022/07/pexels-felix-mittermeier-956999-scaled.jpg");
+    box-shadow: insert 0 50px rgb(20, 20, 20),
+                insert 2px -15px 30px rgb(12, 12, 12)
+                2px 2px 5px rgb(20, 20, 20);
+    padding: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 20px;
+    transition: all .5s ease;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.boxes1 img{
+    width: 300px;
+    border-radius: 50%;
+}
+
+.boxes1:hover{
+    transform: scale(1.2);
+}
+  
+
+
+  //Typing Text
+  .wrapper {
+    height: 10vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 34ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 3.1vw;
+    color: #fff;
+    margin-bottom: 70px;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+//About me
+
+//New about timeline
+
+.align{
+  margin-left: 50vw;
+  margin-top: 33px;
+  
+}
+
+  .timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    margin: 70px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background: url("http://firstportfolio.local/wp-content/uploads/2022/07/giphy-6.gif");
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #fff;
+    
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+    color: #fff;
+    font-size: 35px;
+    text-shadow: 1px 4px rgb(120, 120, 246);
+  
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+  font-size: 1.5vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  background: repeating-linear-gradient(-40deg, rgba(60,60,214,1) 5.10%, rgba(181,53,196,1) 10.15%, rgba(0,212,255,1) 15.25%);
+  -webkit-background-size: 500vw 500vw;
+  background-size: 500vw 500vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite forwards;
+  text-shadow: 1px 2px rgba(30, 29, 29, 0.275);
+
+}
+@keyframes animate{
+  0%{
+      background-position-x: 0%;
+  }
+  100%{
+      background-position-x: 500vw;
+  }
+
+}
+
+
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel { 
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+// Web Designs
+.bot{
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+//Boxes for designs
+.zoom {
+    padding: 10px;
+    transition: transform .2s;
+    width: 150px;
+    height: 150px;
+    //margin-left: 100px;
+    display: inline-block;
+    margin: 100px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+
+  //for video box
+  .tain{
+    margin-bottom: 65px;
+  }
+
+  //h4 heading
+  .cap{
+    font-size: 20px;
+    font-weight: 500;
+    background: repeating-linear-gradient(-40deg, rgba(9,9,121,1) 5.10%, rgba(144,6,161,1) 10.15%, rgba(0,212,255,1) 15.25%);
+    -webkit-background-size: 500vw 500vw;
+    background-size: 500vw 500vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 9s linear infinite forwards;
+  }
+
+  @keyframes animate{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 500vw;
+    }
+
+}
+
+//Websites
+.gin{
+margin-top: 70px;
+margin-bottom: 45px;
+}
+
+.tap{
+    margin-top: 30px;
+}
+
+.card-text{
+    color: #fff;
+}
+
+//card background
+.back {
+    z-index: 1;
+    background: linear-gradient(to right, rgba(49,49,203,1) 0%, rgba(181,53,196,1) 47%, rgba(0,212,255,1) 92%, rgba(49,49,203,1) 100%);
+    background-size: 400% 400%;
+    width: 100%;
+    //height: 12vh;
+    animation: animate 15s ease infinite;
+}
+
+@keyframes animate{
+    0% { background-position: 0 50%;
+    }
+    50% { background-position: 100% 50%;
+    }
+    100% { background-position: 0 50%;
+    }
+
+}
+
+//Button
+.btn5 {
+    background-color: #0a0909;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 11px 20px;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  
+  .btn5:hover {opacity: 1}
+
+
+
+//Contact
+
+.con{
+    margin-top: 70px;
+}
+
+
+//Testimonials
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin-top: 120px;
+    background: linear-gradient(rgb(90, 58, 247), rgb(96, 96, 248), rgb(27, 27, 27));
+}
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 25px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background: linear-gradient(to right, rgb(90, 58, 247), rgb(96, 96, 248), rgb(27, 27, 27));
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 10px;
+      background: linear-gradient(to left, rgb(90, 58, 247), rgb(96, 96, 248), rgb(27, 27, 27));
+    }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(49, 34, 255);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #131313;
+  }
+  
+  /* Add an italic font style to all quotes font-style: italic;*/
+  q {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(to right,  rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+    // -webkit-background-size: 500vw 500vw;
+    // //background-size: 500vw 500vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    // animation: animate 9s linear infinite forwards;
+  }
+
+//   @keyframes animate{
+//     0%{
+//         background-position-x: 0%;
+//     }
+//     100%{
+//         background-position-x: 500vw;
+//     }
+
+// }
+  
+  /* Add a blue color to the author */
+  .author {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    background: repeating-linear-gradient(-40deg, rgb(84, 129, 250) 5.10%, rgb(228, 40, 249) 10.15%, rgb(212, 2, 104) 15.25%);
+    -webkit-background-size: 500vw 500vw;
+    background-size: 500vw 500vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 9s linear infinite forwards;
+    }
+
+    @keyframes animate{
+        0%{
+            background-position-x: 0%;
+        }
+        100%{
+            background-position-x: 500vw;
+        }
+    
+    }
+
+
+
+  /* profile img */
+  .wrap{
+    min-height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    
+}
+
+.boxes{
+    background: url("http://firstportfolio.local/wp-content/uploads/2022/07/pexels-felix-mittermeier-956999-scaled.jpg");
+    box-shadow: insert 0 50px rgb(20, 20, 20),
+                insert 2px -15px 30px rgb(12, 12, 12)
+                2px 2px 5px rgb(20, 20, 20);
+    padding: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 20px;
+    transition: all .5s ease;
+}
+
+.boxes img{
+    width: 17vw;
+    border-radius: 50%;
+    height: 18vw;
+}
+
+.boxes:hover{
+    transform: scale(1.1);
+}
+
+.textes{
+  font-size: 14px;
+}
